@@ -8,3 +8,53 @@
  4.Array elements are stored in contiguous memory locations.
 
  5.The first element index is 0, and the last element index is size - 1.
+
+
+
+
+ whenever we do do some  specific tadk using arrays we write the code but the output is not efficient 
+ (looks wise ) so  we use <iomanip> headerfile to use various manipulators :: some of them are 
+
+ 📒 Input/Output Manipulators in C++ (<iomanip> & <ios>)
+
+🔹 1. Field Width & Fill
+setw(int n) → sets the output field width (number of characters).
+setfill(char c) → fills extra spaces with the given character.
+
+🔹 2. Alignment
+left → aligns output to the left.
+right → aligns output to the right.
+internal → places the sign on the left and aligns the number to the right.
+
+🔹 3. Numbers Base (radix)
+dec → decimal (default).
+hex → hexadecimal.
+oct → octal.
+showbase → shows base prefix (0x for hex, 0 for octal).
+noshowbase → hides the base prefix.
+
+🔹 4. Floating-point Formatting
+setprecision(int n) → sets precision (significant digits or decimal places).
+fixed → prints with fixed decimal points.
+scientific → prints in scientific notation (exponential form).
+defaultfloat → normal floating style (default).
+showpoint → forces decimal point (even if number is whole).
+noshowpoint → removes unnecessary decimal point.
+
+🔹 5. Boolean Formatting
+boolalpha → prints true/false.
+noboolalpha → prints 1/0.
+
+🔹 6. Sign Control
+showpos → shows + sign for positive numbers.
+noshowpos → hides the + sign (default).
+
+🔹 7. Uppercase / Lowercase
+
+uppercase → prints E in scientific notation and A-F in hex in uppercase.
+nouppercase → prints them in lowercase (default).
+
+🔹 8. Whitespace Handling (for cin)
+skipws → skips leading whitespaces (default).
+noskipws → reads whitespace as input.
+
