@@ -1,0 +1,10 @@
+ 
+ 1.An array is a collection of the same data type.
+
+ 2.Example: int arr[5]; stores only integer values.
+
+ 3.An array allows us to store multiple values in a single variable.
+
+ 4.Array elements are stored in contiguous memory locations.
+
+ 5.The first element index is 0, and the last element index is size - 1.
