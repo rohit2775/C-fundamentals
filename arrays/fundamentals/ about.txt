@@ -58,3 +58,100 @@ nouppercase → prints them in lowercase (default).
 skipws → skips leading whitespaces (default).
 noskipws → reads whitespace as input.
 
+
+
+  // notable point //
+   sometimes we code  and finally got results but the code is not efficient according to the BIG-O (n) method 
+    
+    like if we have to find the max and min of an array then we can go through many processes my first approach was 
+
+   -sort the array 
+   -print the first and last value of the sorted array as max and min value 
+
+   
+
+ #include <iostream>
+ using namespace std;
+
+ int main (){
+
+     int a[10];
+     int temp;
+     cout<<"enter  10 numbers for the asrray "<<endl;
+
+     for (int i=0 ; i<=9; i++){
+
+        cin>>a[i];
+        
+     }  
+          for (int i=0; i<=9;i++){
+
+            for(int j=i+1; j<=9;j++){
+
+                 if (a[j]>a[i]){
+                    temp = a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+
+                 }
+            }
+          }
+
+        cout<<"the maximum  of the array is:"<<a[0]<<endl;
+
+        cout<<"the minimum  of the array is:"<<a[9]<<endl;
+
+
+ 
+
+    return 0;
+
+
+ }
+
+
+  here this will correctly give the results  but this method is O(n2)
+  in essence two major steps arer needed for solving this problem but in other hand 
+
+
+
+
+  look at this code 
+
+
+
+ #include <iostream>
+using namespace std;
+
+int main() {
+    int a[10];
+    cout << "Enter 10 numbers for the array: " << endl;
+
+    for (int i = 0; i < 10; i++) {
+        cin >> a[i];
+    }
+
+    int maxVal = a[0];
+    int minVal = a[0];
+
+    for (int i = 1; i < 10; i++) {
+        if (a[i] > maxVal) {
+            maxVal = a[i];
+        }
+        if (a[i] < minVal) {
+            minVal = a[i];
+        }
+    }
+
+    cout << "The maximum of the array is: " << maxVal << endl;
+    cout << "The minimum of the array is: " << minVal << endl;
+
+    return 0;
+}
+
+
+
+ this is O(n)
+ in essence only one major thing is needed for the  logic 
+
+ 
