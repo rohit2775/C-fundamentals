@@ -25,3 +25,12 @@ Syntax:
 ReturnType functionName(argumentList);
 Function definition is a block of code
 
+
+  function definition 
+  writing a block of code with its return type and arguments is called function definition 
+
+  these are of 4 types 
+  1.takes nothing return nothilng 
+  2.takes something return something
+  3.take something return nothing 
+  4. take nothing return something 
