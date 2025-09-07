@@ -8,3 +8,20 @@ Function is a way to achieve modularization.
 Functions are Predefined and User-defined.
 
 Predefined functions are declared in header files and defined in library files.
+
+
+
+
+function declaration , definition , function call 
+
+
+
+function declaration 
+
+Function Declaration is also known as Function prototype
+Functions need to be declared before use (just like variables)
+Functions can be declared locally or globally
+Syntax:
+ReturnType functionName(argumentList);
+Function definition is a block of code
+
