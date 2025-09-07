@@ -152,7 +152,7 @@ int main() {
 
 
  this is O(n)
- in essence only one major thing is needed for the  logic 
+ (in essence ) only one major thing is needed for the  logic 
 
 
   
