@@ -34,3 +34,6 @@ Function definition is a block of code
   2.takes something return something
   3.take something return nothing 
   4. take nothing return something 
+
+ note : functions are majorly used  as modularisation 
+ 
