@@ -16,7 +16,7 @@ function declaration , definition , function call
 
 
 
-function declaration 
+ 1.function declaration 
 
 Function Declaration is also known as Function prototype
 Functions need to be declared before use (just like variables)
@@ -26,7 +26,7 @@ ReturnType functionName(argumentList);
 Function definition is a block of code
 
 
-  function definition 
+ 2. function definition 
   writing a block of code with its return type and arguments is called function definition 
 
   these are of 4 types 
@@ -35,5 +35,15 @@ Function definition is a block of code
   3.take something return nothing 
   4. take nothing return something 
 
- note : functions are majorly used  as modularisation 
- 
+3. Function Call
+This is when you use the function in your program.
+At this point, the function executes and returns a result.
+
+
+{arguments 
+
+Formal Arguments
+The variables written inside the function definition are called formal arguments.
+They act like placeholders that receive values when the function is called.}
+
+
