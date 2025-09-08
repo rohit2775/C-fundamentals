@@ -47,3 +47,75 @@ The variables written inside the function definition are called formal arguments
 They act like placeholders that receive values when the function is called.}
 
 
+
+examples 
+
+
+1. Takes Nothing, Returns Nothing
+
+#include <iostream>
+using namespace std;
+
+void greet() {   // takes nothing, returns nothing
+    cout << "Hello Rohit bhai! 👋" << endl;
+}
+
+int main() {
+    greet();   // function call
+    return 0;
+}
+
+
+
+
+2. Takes Something, Returns Something
+
+#include <iostream>
+using namespace std;
+
+int square(int n) {   // takes something, returns something
+    return n * n;
+}
+
+int main() {
+    int num = 5;
+    int result = square(num);   // function call
+    cout << "Square of " << num << " is " << result << endl;
+    return 0;
+}
+
+
+3. Takes Something, Returns Nothing
+
+#include <iostream>
+using namespace std;
+
+void printSum(int a, int b) {   // takes something, returns nothing
+    cout << "Sum is: " << a + b << endl;
+}
+
+int main() {
+    printSum(7, 3);   // function call
+    return 0;
+}
+
+
+
+
+
+
+4. Takes Nothing, Returns Something
+
+
+#include <iostream>
+using namespace std;
+
+int getRandomNumber() {   // takes nothing, returns something
+    return 42;  // just an example value
+}
+
+int main() {
+    int num = getRandomNumber();   // function call
+    cout << "Random number is: " << num << endl;
+    return 0;
+}
