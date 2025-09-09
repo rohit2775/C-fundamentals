@@ -252,3 +252,13 @@ int main() {
 Sum of 2 int: 30
 Sum of 2 double: 6
 Sum of 3 int: 6
+
+
+Polymorphism in short 
+
+Polymorphism = one name, many forms.
+Compile-time Polymorphism → Function Overloading + Operator Overloading.
+Run-time Polymorphism → Function Overriding (with virtual functions).
+Function overloading & operator overloading = early binding (compile-time).
+Function overriding = late binding (runtime).
+
