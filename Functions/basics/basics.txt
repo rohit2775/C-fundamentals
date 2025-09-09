@@ -119,3 +119,57 @@ int main() {
     cout << "Random number is: " << num << endl;
     return 0;
 }
+
+   Inline function ..... 
+   
+
+ Definition
+An inline function is a function in which the compiler replaces the function call with the actual function code, instead of performing a normal function call.
+
+Why use it?
+
+To reduce function call overhead (time taken to jump to the function and return back).
+
+Useful for small & frequently used functions.
+
+How to declare?
+Use the keyword inline before the function definition:
+
+inline return_type function_name(parameters) {
+    // function body
+}
+
+
+When to use?
+
+For short functions (like getters, setters, mathematical calculations).
+
+Functions used frequently in the program.
+
+When NOT to use?
+
+For large/complex functions → increases code size (code bloat).
+
+If the function contains loops, recursion, static variables → compiler may ignore inline.
+
+Note
+
+inline is a request to the compiler, not a command. The compiler may ignore it.
+
+✅ Example Code
+#include <iostream>
+using namespace std;
+
+// Inline function for square
+inline int square(int x) {
+    return x * x;
+}
+
+int main() {
+    int a = 5, b = 10;
+
+    cout << "Square of " << a << " = " << square(a) << endl;
+    cout << "Square of " << b << " = " << square(b) << endl;
+
+    return 0;
+}
