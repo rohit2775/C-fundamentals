@@ -121,7 +121,7 @@ int main() {
 }
 
    Inline function ..... 
-   
+
 
  Definition
 An inline function is a function in which the compiler replaces the function call with the actual function code, instead of performing a normal function call.
@@ -173,3 +173,82 @@ int main() {
 
     return 0;
 }
+
+
+
+FUNCTION OVERLOADING 
+
+Function Overloading & Polymorphism
+🔹 Polymorphism (Many Forms)
+
+Definition:
+Polymorphism means performing a single action in different forms.
+Example: + operator used for addition of numbers or concatenation of strings.
+
+Types of Polymorphism in C++
+
+Compile-time Polymorphism (Static Polymorphism)
+Decision is made at compile time.
+Achieved using:
+Function Overloading ✅
+Operator Overloading
+
+Run-time Polymorphism (Dynamic Polymorphism)
+Decision is made at run time.
+Achieved using:
+Function Overriding (with Virtual Functions)
+
+
+function Overloading
+
+Definition
+Function overloading in C++ means having multiple functions with the same name but with different parameters (type, number, or order).
+
+👉 Compiler decides which function to call based on the arguments passed.
+
+Purpose
+Code becomes clean and readable.
+Same function name but used for different tasks depending on input.
+Rules for Function Overloading
+
+Function name must be the same.
+Parameters must differ by:
+Number of parameters
+Data type of parameters
+Order of parameters
+Return type alone cannot distinguish overloaded functions.
+
+✅ Example Code
+#include <iostream>
+using namespace std;
+
+class Math {
+public:
+    // Overloaded functions
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+};
+
+int main() {
+    Math m;
+
+    cout << "Sum of 2 int: " << m.add(10, 20) << endl;
+    cout << "Sum of 2 double: " << m.add(3.5, 2.5) << endl;
+    cout << "Sum of 3 int: " << m.add(1, 2, 3) << endl;
+
+    return 0;
+}
+
+📌 Output:
+Sum of 2 int: 30
+Sum of 2 double: 6
+Sum of 3 int: 6
