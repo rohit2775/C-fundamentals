@@ -279,3 +279,34 @@ It is not a member function (so it doesn’t use scope resolution ::).
 It can be a normal function, a friend of one class, or even a friend of multiple classes.
 It can access private & protected members directly.
 It is called like a normal function (not using object/member access).
+ 
+ here's a simple example ( do not panic if you dont get it )
+
+ #include <iostream>
+using namespace std;
+
+class Box {
+private:
+    int length;
+
+public:
+    Box(int l) : length(l) {}
+
+    // Declare friend function
+    friend void showLength(Box b);
+};
+
+// Friend function definition
+void showLength(Box b) {
+    // Directly accessing private data
+    cout << "Length of box: " << b.length << endl;
+}
+
+int main() {
+    Box b1(20);
+
+    // Friend function call
+    showLength(b1);
+
+    return 0;
+}
