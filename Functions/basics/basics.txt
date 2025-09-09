@@ -262,3 +262,20 @@ Run-time Polymorphism → Function Overriding (with virtual functions).
 Function overloading & operator overloading = early binding (compile-time).
 Function overriding = late binding (runtime).
 
+
+
+some more things indise the opps concetpts 
+
+
+friend function 
+A friend function is a function that is not a member of a class but has the right to access private and protected members of that class.
+ Normally, private/protected data ko class ke bahar access nahi kar sakte, lekin friend keyword use karke us function ko allow kar dete hain.
+
+
+
+🔹 Characteristics of Friend Function
+Declared in class using the keyword friend.
+It is not a member function (so it doesn’t use scope resolution ::).
+It can be a normal function, a friend of one class, or even a friend of multiple classes.
+It can access private & protected members directly.
+It is called like a normal function (not using object/member access).
