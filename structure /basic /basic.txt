@@ -16,4 +16,35 @@
  now StructureName is a datatype , and can also create variables using StructureName datatype 
 
  ex StructureName s1;
-  
+
+
+
+
+
+
+# how to  initialize a structure ... 
+
+#include <iostream>
+#include <cstring>   // for strcpy
+using namespace std;
+
+struct book {
+    int bookid;
+    char title[20];
+    float price;
+};
+
+int main() {
+    // Initialization at the time of declaration
+    book b1 = {100, "C++ by Saurabh", 450.0};
+
+    //make Another book structure variable first then initialize accordingly 
+    book b2;
+    b2.bookid = 101;
+    strcpy(b2.title, "C++ made easy");  // copy string into char array
+    b2.price = 300.0;
+
+
+
+    return 0;
+}
