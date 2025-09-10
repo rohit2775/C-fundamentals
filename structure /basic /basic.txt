@@ -1,0 +1,19 @@
+ 
+ A structure in C++ is a user-defined data type that allows grouping variables of different data types under a single name.
+
+ we can declare structure globally or locally 
+
+ example 
+
+ struct StructureName {
+    // members
+    datatype variable1;
+    datatype variable2;
+    ...
+};
+
+
+ now StructureName is a datatype , and can also create variables using StructureName datatype 
+
+ ex StructureName s1;
+  
