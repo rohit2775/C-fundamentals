@@ -84,3 +84,23 @@ int main() {
 
 
 
+
+Three major differences in structure of C & C++
+
+C structure
+Whenever we structure → We have to write the struct keyword.
+It does not provide encapsulation.
+No access specifiers.
+
+C++ structure
+Need to write struct keyword only in the time of declaration.
+It provides encapsulation as C++ is object-oriented language.
+For data security it gives the concept of access specifiers:
+private
+
+protected
+
+public
+
+
+
