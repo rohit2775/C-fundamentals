@@ -48,3 +48,39 @@ int main() {
 
     return 0;
 }
+
+
+encapsulation using structures
+
+encapsualtion refers to the act of combining properties and methods related a particular enitity ..
+ here is a basic example of encapsulation ;
+
+ #include <iostream>
+#include <cstring>
+using namespace std;
+
+struct book {
+    int bookid;
+    char title[20];
+    float price;
+
+    void input() {
+        cout << "Enter bookid, title and price: ";
+        cin >> bookid >> title >> price;
+    }
+
+    void display() {
+        cout << "\n" << bookid << " " << title << " " << price;
+    }
+};
+
+int main() {
+    book b1;
+    b1.input();
+    b1.display();
+
+    return 0;
+}
+
+
+
