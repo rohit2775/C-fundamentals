@@ -97,10 +97,51 @@ Need to write struct keyword only in the time of declaration.
 It provides encapsulation as C++ is object-oriented language.
 For data security it gives the concept of access specifiers:
 private
-
 protected
-
 public
 
+that means we can define member acessible rules in c++  
+and here is the simple code example of data security ;;;;;
+
+
+
+ 
+
+#include <iostream>
+using namespace std;
+
+
+ struct book {
+  private:
+   int bookid;
+   char name[20] ;
+   float price;
+
+   public:
+   void input(){
+    cout<<"enter the bookid , name , price";
+    cin>>bookid>>name>>price;
+    if (bookid <0)
+    bookid = -bookid;
+    
+   }
+
+   void display()
+   {
+    cout<<bookid<<name<<price;
+
+   }
+  
+ };
+
+ int main (){
+   
+    book b1;
+    b1.input();
+    b1.display();
+
+
+    return 0 ;
+ }
 
 
