@@ -27,3 +27,27 @@ Matlab bina access specifier diye unhe kahin se access nahi kiya jaa sakta.
 Class = Blueprint (private by default).
 Object = Real entity created from class.
 Structure = Members public by default.
+
+
+// matlab jo kaam structure se hota tha aab wo kaam class and object se hoga .. 
+
+
+example 
+ 
+
+ structure man {
+
+
+ };
+
+ int main (){
+
+    man m1 ; here  m1 is a variable 
+
+ }
+
+
+ class man (){
+
+    man m1  // here m1 is an object 
+ }
