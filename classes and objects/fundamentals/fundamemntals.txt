@@ -1,0 +1,29 @@
+Class
+
+A class is a user-defined data type which acts as a blueprint for creating objects.
+Jo kaam structure karta tha, wahi kaam class karega.
+
+A class can contain:
+Data Members → variables
+Member Functions → functions
+
+🔹 Object
+
+An object is an instance of a class.
+Object ka use karke hum class ke data members aur functions ko access kar sakte hain.
+
+🔹 Difference between Structure and Class
+
+Structure
+Members are public by default.
+Matlab unhe kahin se bhi access kiya jaa sakta hai.
+
+Class
+Members are private by default.
+Matlab bina access specifier diye unhe kahin se access nahi kiya jaa sakta.
+
+👉 Short Summary:
+
+Class = Blueprint (private by default).
+Object = Real entity created from class.
+Structure = Members public by default.
