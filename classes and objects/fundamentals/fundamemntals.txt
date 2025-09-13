@@ -103,3 +103,19 @@ using namespace std;
 
        lets create some programs in next level 
        
+
+
+
+
+
+       Classes & Objects (Technical Jargons)
+
+Class → A description/blueprint of an object
+
+Object → An instance of a class
+
+Instance Member Variables →
+Attributes, data members, fields, properties
+
+Instance Member Functions →
+Methods, procedures, actions, operations, services
