@@ -11,3 +11,34 @@
   ->they are by default initialized to 0 
   ->their lifetime is throughout the program
    we use static keyword to initialze a variable as a static variable 
+
+
+   lets take an example :;
+   
+    void fun (){
+     static int id;
+          int contactno;
+
+    }
+
+    void main (){
+        fun();
+
+    }
+
+    int the above example the id is a static local variable and the contactno is the simple variable 
+    
+
+  ##    what's the Difference between the state and  simple local variable \
+      
+      localvariale
+      1. it get invoked when the fun function is called
+      2. memory consumption takes palce when the fun function is called . 
+      3. it will get memory each time whenever the function is called , and destroy the memory allocation after the use .
+      4. it is initialized with garbage values 
+
+     state variables 
+     1. it is invoked when the program  is executed 
+     2. memory consumption  takes place  when the program start executing  
+     3. it gets memory at the begining  only once and get destroyed after the program executed successfully .
+     
