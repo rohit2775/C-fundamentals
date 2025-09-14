@@ -1,0 +1,13 @@
+ 
+
+ static members in c++ 
+
+ 1.static local variable 
+ 2.static member variables 
+ 3.static member Functions
+
+
+ 1.static local variables .... 
+  ->they are by default initialized to 0 
+  ->their lifetime is throughout the program
+   we use static keyword to initialze a variable as a static variable 
