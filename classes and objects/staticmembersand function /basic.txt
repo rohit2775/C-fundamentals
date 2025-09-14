@@ -7,7 +7,7 @@
  3.static member Functions
 
 
- 1.static local variables .... 
+#### 1.static local variables .... 
   ->they are by default initialized to 0 
   ->their lifetime is throughout the program
    we use static keyword to initialze a variable as a static variable 
@@ -29,7 +29,7 @@
     int the above example the id is a static local variable and the contactno is the simple variable 
     
 
-  ##    what's the Difference between the state and  simple local variable \
+  ##    what's the Difference between the static and  simple local variable \
       
       localvariale
       1. it get invoked when the fun function is called
@@ -37,8 +37,55 @@
       3. it will get memory each time whenever the function is called , and destroy the memory allocation after the use .
       4. it is initialized with garbage values 
 
-     state variables 
+     static variables 
      1. it is invoked when the program  is executed 
      2. memory consumption  takes place  when the program start executing  
      3. it gets memory at the begining  only once and get destroyed after the program executed successfully .
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### 2.static member variable 
+   1.declared inside the class body 
+   2.also known as the class member variable 
+   3.static member variables doesnot belong to any object , it belongs to the whole class ;
+   4. there will be only one copy of the static member variable for the whole class 
+   5.any object can use the same copy of the class variable 
+   6.they also can be used with the class name .
+   7.we have to define the srtatic outside the class .
+       data_type classname:: variable name 
+
+
+    example code :
+    
+      class men {
+        private :
+          int regno;
+          static int id ;   // declaration of static member variable 
+
+      
+      };
+       int men::id;
+       or 
+       int men::id=32;      // definitiion of static member variables 
+
+
+      void main(){
+        men m1,m2;
+      }
+       
+
+       in this program there will be only one id ; if there will be  n no of objects , then also we have only one id for the whole progtam 
+         if there will be no objects the we have also a id 
+
+         
+
