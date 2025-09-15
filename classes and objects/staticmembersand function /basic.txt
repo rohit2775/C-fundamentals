@@ -132,3 +132,9 @@ int main()
     return 0;
 }
 
+
+
+// from the above example we can find how to access the static  menbers when it is in private
+
+
+
