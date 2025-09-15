@@ -89,3 +89,46 @@
 
          
 
+  3 . static member function
+   (how to access the static member variables of a class through a static mmember function )
+
+    #1 make a function with static keyword 
+
+
+    #include <iostream>
+using namespace std;
+
+class Account
+{
+private:
+    int balance;                  // Instance Member variable
+    static float roi;             // Static Member variable / Class Variable
+
+public:
+    void setBalance(int b)
+    {
+        balance = b;
+    }
+
+    static void setRoi(float r)   // Static Member Function
+    {
+        roi = r;
+    }
+};
+
+// Definition of static member outside the class
+float Account::roi = 3.5f;
+
+int main()
+{
+    Account a1, a2;
+
+    // Static function can be called using object
+    a1.setRoi(4.5f);
+
+    // Or using class name directly
+    Account::setRoi(4.5f);
+
+    return 0;
+}
+
