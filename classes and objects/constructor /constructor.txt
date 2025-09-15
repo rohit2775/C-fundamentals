@@ -1,0 +1,41 @@
+  
+       constructor !!
+
+
+  Constructor is a member function of a class.
+Matlab constructor ek special function hota hai jo class ke andar define hota hai.
+
+The name of the constructor is same as the name of the class.
+Agar class ka naam Student hai, to constructor bhi Student() hi hoga.
+
+It has no return type.
+Constructor koi int, void, ya float return type nahi rakhta.
+
+Isme return keyword use nahi hota.
+It must be an instance member function.
+
+Matlab constructor hamesha object ke sath call hota hai.
+Ye kabhi bhi static nahi ho sakta.
+
+👉 Example:
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    Student() {   // Constructor (same name as class)
+        cout << "Constructor called!" << endl;
+    }
+};
+
+int main() {
+    Student s1;  // Object banate hi constructor call ho jata hai
+    return 0;
+}
+
+
+Output:
+
+Constructor called!
+
