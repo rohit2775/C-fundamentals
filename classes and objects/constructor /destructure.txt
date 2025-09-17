@@ -1,0 +1,49 @@
+ 
+
+
+
+ Destructor in C++
+
+
+🔹 Definition
+
+Destructor ek instance member function hota hai jo object ke destroy hote hi automatically call hota hai.
+Iska main kaam hai memory cleanup karna (jaise dynamically allocated memory free karna).
+🔹 Rules / Properties
+
+Destructor ka naam class ke naam jaisa hota hai, bas aage ~ (tilde) lagta hai.
+
+class Demo {
+public:
+    ~Demo() {
+        cout << "Destructor called" << endl;
+    }
+};
+
+
+Destructor kabhi static nahi ho sakta.
+Destructor ka koi return type nahi hota (na void, na kuch aur).
+Destructor arguments nahi leta, isliye overloading possible nahi hai.
+ye object ke destroy hote saath hi call ho jaate hai 
+
+🔹 Example
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    Student() {
+        cout << "Constructor called" << endl;
+    }
+    ~Student() {
+        cout << "Destructor called" << endl;
+    }
+};
+
+int main() {
+    Student s1;  // Constructor call hoga
+}  // Program end hote hi Destructor automatically call hoga
+
+🟢 Output:
+Constructor called
+Destructor called
