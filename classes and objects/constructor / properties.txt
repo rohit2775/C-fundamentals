@@ -1,0 +1,86 @@
+ 
+ 🔹 1. Constructor Overloading
+
+Constructor overloading means having multiple constructors in the same class with different parameter lists.
+
+Compiler automatically calls the right constructor depending on the arguments given during object creation.
+
+It is a type of compile-time polymorphism.
+
+👉 Example:
+
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int age;
+public:
+    // Default constructor
+    Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Parameterized constructor
+    Student(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+int main() {
+    Student s1;                 // Calls default constructor
+    Student s2("Rohit", 20);    // Calls parameterized constructor
+
+    s1.display();
+    s2.display();
+    return 0;
+}
+
+🔹 2. Default Constructor
+
+A constructor without parameters.
+
+It is automatically provided by the compiler if you don’t write any constructor.
+
+Used for giving default values to data members.
+
+👉 Example:
+
+class Car {
+    string brand;
+public:
+    Car() {   // Default constructor
+        brand = "Unknown";
+    }
+    void show() {
+        cout << "Brand: " << brand << endl;
+    }
+};
+
+🔹 3. Parameterized Constructor
+
+A constructor that takes arguments to initialize objects with specific values.
+
+Useful when you want to pass data while creating an object.
+
+👉 Example:
+
+class Car {
+    string brand;
+public:
+    Car(string b) {   // Parameterized constructor
+        brand = b;
+    }
+    void show() {
+        cout << "Brand: " << brand << endl;
+    }
+};
+
+
+
