@@ -39,3 +39,9 @@ Output:
 
 Constructor called!
 
+
+
+### constructor is implicitly  invoked when object is created .
+### constructor is used to solve the problem of initializaton . 
+
+
