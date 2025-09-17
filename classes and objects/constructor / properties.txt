@@ -1,10 +1,12 @@
- 
+
+      ### some more  facts about constructor 
+
+      
+
  🔹 1. Constructor Overloading
 
 Constructor overloading means having multiple constructors in the same class with different parameter lists.
-
 Compiler automatically calls the right constructor depending on the arguments given during object creation.
-
 It is a type of compile-time polymorphism.
 
 👉 Example:
@@ -45,9 +47,7 @@ int main() {
 🔹 2. Default Constructor
 
 A constructor without parameters.
-
 It is automatically provided by the compiler if you don’t write any constructor.
-
 Used for giving default values to data members.
 
 👉 Example:
@@ -66,9 +66,7 @@ public:
 🔹 3. Parameterized Constructor
 
 A constructor that takes arguments to initialize objects with specific values.
-
 Useful when you want to pass data while creating an object.
-
 👉 Example:
 
 class Car {
@@ -84,3 +82,112 @@ public:
 
 
 
+
+
+
+
+### copy constructor 
+
+Copy Constructor in C++
+👉 Definition
+
+Copy constructor ek special constructor hota hai jo ek object ko dusre object ki copy banane ke liye use hota hai.
+
+Syntax:
+
+ClassName(const ClassName &obj) {
+    // copy logic
+}
+
+
+Agar tu khud na likhe to compiler ek default copy constructor bana deta hai (shallow copy).
+
+🧑‍💻 Example 1: Basic Copy Constructor
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int age;
+public:
+    // Parameterized Constructor
+    Student(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Copy Constructor
+    Student(const Student &s) {
+        name = s.name;
+        age = s.age;
+    }
+
+    void display() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+int main() {
+    Student s1("Rohit", 20);   // Normal constructor
+    Student s2 = s1;           // Copy constructor called
+
+    s1.display();
+    s2.display();
+}
+
+🟢 Output:
+Name: Rohit, Age: 20
+Name: Rohit, Age: 20
+
+
+👉 s2 ko banate waqt s1 ki copy ho gayi.
+
+🔹 Types of Copy
+
+Shallow Copy (Default copy constructor)
+
+Sirf values copy karta hai.
+
+Agar pointers use ho rahe hain to dono object same memory address ko point karte hain (dangerous 😬).
+
+Deep Copy (Custom copy constructor)
+
+Agar pointers use ho rahe hain to naye memory block allocate karke values copy karta hai.
+
+Data safe rehta hai.
+
+🧑‍💻 Example 2: Deep Copy Example
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Book {
+    char *title;
+public:
+    // Parameterized Constructor
+    Book(const char *t) {
+        title = new char[strlen(t) + 1];
+        strcpy(title, t);
+    }
+
+    // Deep Copy Constructor
+    Book(const Book &b) {
+        title = new char[strlen(b.title) + 1];
+        strcpy(title, b.title);
+    }
+
+    void show() {
+        cout << "Book: " << title << endl;
+    }
+};
+
+int main() {
+    Book b1("C++ Programming");
+    Book b2 = b1;   // Copy constructor (Deep Copy)
+
+    b1.show();
+    b2.show();
+}
+
+
+✅ Deep copy me b2 ka title alag memory me copy hua, isliye safe hai.
