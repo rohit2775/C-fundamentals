@@ -2,7 +2,8 @@
 
  ## operator overloading 
 
- it is a way to implement  the compiletime polymorphism 
+ when ans operator is overloaded with multiple jobs , it is known as operator overloading 
+ it is a way to implement  the compile time polymorphism 
  it is same as function overloading
  here we use primitive  opereators as function name 
 
@@ -88,3 +89,12 @@
 
     return 0;
  }
+ ////
+
+
+
+ ##### operator overloading rules to be known ......
+     1. any symbol can be used as a function name if it is valid operator in c language 
+     2. it  is preceeded by operator  keyword.
+     3. we  cannot overload sizeof() and  ?: (ternary operator ).
+      
