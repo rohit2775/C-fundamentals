@@ -1,0 +1,90 @@
+
+
+ ## operator overloading 
+
+ it is a way to implement  the compiletime polymorphism 
+ it is same as function overloading
+ here we use primitive  opereators as function name 
+
+ 
+ ##for operator overloading  Lets see some example ...
+  
+   we can add/subtract two primitive data types,, but not  two non primitive datatypes 
+    like classes 
+
+    for that we can make a  instance member function for the addition of two non primitive datatypes 
+    
+         
+ 
+ #include<iostream>
+ using namespace std ;
+
+ class complexno {
+    private:
+    int a;
+    int b;
+    public:
+    void setdata(int x , int y ){
+    a=x;
+    b=y;
+    }
+    void showdata(){
+        cout<<"a="<<a<<"b="<<b<<endl;
+    }
+    complexno add (complexno c ){
+       complexno temp ;
+        temp.a=a+c.a;
+        temp.b=b+c.b;
+        return temp;
+    }
+ };
+ int main (){
+     complexno c1,c2,c3;
+     c1.setdata(3,5);
+     c2.setdata(6,7);
+     c3=c1.add(c2);
+      c3.showdata();
+
+    return 0;
+ }
+
+   
+  >>>>>>  here  we  have made a function for addition of two complex numbers we can make that function name as operator + 
+
+>>>>>>>>> here is the code  
+  
+
+   #include<iostream>
+ using namespace std ;
+
+ class complexno {
+    private:
+    int a;
+    int b;
+    public:
+    void setdata(int x , int y ){
+    a=x;
+    b=y;
+    }
+    void showdata(){
+        cout<<"a="<<a<<"b="<<b<<endl;
+    }
+    complexno operator +(complexno c ){
+       complexno temp ;
+        temp.a=a+c.a;
+        temp.b=b+c.b;
+        return temp;
+    }
+ };
+ int main (){
+     complexno c1,c2,c3;
+     c1.setdata(3,5);
+     c2.setdata(6,7);
+     c3=c1.operator +(c2);  // we can do this as well as the below thing 
+     OR,....
+     c3 = c1+c2;
+
+      c3.showdata();
+
+    return 0;
+ }
