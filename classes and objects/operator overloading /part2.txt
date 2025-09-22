@@ -34,7 +34,7 @@ int main() {
     cout << "Original c1: ";
     c1.showData();
 
-    // Using operator function explicitly
+    // Using operator function explicitly 
     c2 = c1.operator-();
     cout << "After overloading (explicit call): ";
     c2.showData();
@@ -49,4 +49,64 @@ int main() {
 
    
     
+     ## overloading of pre and post increment 
+   
+     
+        #include <iostream>
+using namespace std;
+
+class integer{
+private:
+    int a;
+
+public:
+    void setData(int x) {
+        a = x;
+    }
+
+    void showData() {
+        cout << a  << endl;
+    }
+     integer operator++ (){
+       integer i ;
+       i.x=++x;    // pre increment
+       return(i);
+
+
+     }
+
+       integer operator++ (int ){
+       integer i ;
+       i.x=x++;         // post increment
+        return(i);
+       
+
+     }
+
+};
+
+int main() {
+     
+    integer i1, i2 ; 
+  
+      i2=i1++;
+
+
+    return 0;
+}
+
+
+
+
+in post increment i have used a parameter  to distinguish between pre and post increment 
+it will be easy for the compiler to find out the correct function 
+
+
+  we need to write the operators as it is while calling 
+  like 
+  12= ++i;  pre 
+  12= i++;  post 
+    
+
+    the compiler will get it when we writw this 
     
