@@ -49,3 +49,58 @@ then why friend function ???
 
 >>>> here the class is using friend keyword which meas that the function can access the private and public member function means , class is giving a permission slip that this function can access/see/use/update my members variable which are protected and private 
 
+
+
+
+ part 2 
+
+ the friend function can become friend to more than one class . 
+
+  
+ #include<iostream>
+ using namespace std ;
+
+ class B;
+ class A {
+     private :
+     int a ;
+     public :
+     void setdata(int x ){
+        a=x;
+
+     }
+    friend void fun(A,B);
+
+ }; 
+  class B{
+     private :
+     int b ;
+     public :
+     void setdata(int y ){
+        b=y;
+
+     }
+    friend void fun(A,B);
+
+ }; 
+
+ void fun (A obj,B obj1){
+    cout<<"the sum  is "<<obj.a +obj1.b;
+
+ }
+
+ int main (){
+
+    A ob1 ;
+    B ob2;
+    ob1.setdata(3);
+    ob2.setdata(4);
+    fun(ob1 ,ob2);
+
+ }
+
+
+  here the fun function is a friend function which can access the members of both the classes of A and B ,
+
+  and henc it is the first property of friend function ..
+  
