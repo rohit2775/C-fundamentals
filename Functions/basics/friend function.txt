@@ -39,3 +39,13 @@ void show(A obj) {           // Definition outside the class
 Important Rule
 
 A friend function is not a part of the class, but it has special permission to access private/protected data of that class.
+
+
+
+
+now question arises that if friend function is not the member function of the class then why it has rights to access the private and public member variables ,,,,
+it is against the rules of datasecurity and this could breach data .... 
+then why friend function ???
+
+>>>> here the class is using friend keyword which meas that the function can access the private and public member function means , class is giving a permission slip that this function can access/see/use/update my members variable which are protected and private 
+
