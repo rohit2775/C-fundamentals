@@ -102,5 +102,6 @@ then why friend function ???
 
   here the fun function is a friend function which can access the members of both the classes of A and B ,
 
-  and henc it is the first property of friend function ..
-  
+  and hence it is the first property of friend function ..
+
+
