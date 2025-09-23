@@ -1,0 +1,41 @@
+ 
+
+ Notes: Friend Function in C++
+Key Points:
+
+Access
+
+A friend function can access private and protected members of a class if it is declared as a friend.
+It cannot directly access members without an object.
+
+Caller Object
+A friend function has no caller object
+It is not invoked using objectName.functionName(), but simply by calling the function.
+
+Membership
+It is not a member function of the class.
+It should not be defined with the membership label (className::).
+
+Declaration
+It is declared inside the class using the friend keyword.
+
+Definition
+It must be defined outside the class.
+
+Example:
+
+class A {
+    int x;
+public:
+    A() : x(10) {}
+    friend void show(A obj);  // Declaration
+};
+
+void show(A obj) {           // Definition outside the class
+    cout << obj.x;
+}
+
+
+Important Rule
+
+A friend function is not a part of the class, but it has special permission to access private/protected data of that class.
