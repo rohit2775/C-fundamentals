@@ -235,3 +235,14 @@ int main (){
 
 
     return 0;
+}
+
+
+cin>>c1; // here this  line can be explained as operator>>(cin ,c1)
+which means that the  friend function in calling with two arguments that are cin object and c1 object 
+
+similarly ;
+
+    cout<<c1; /// this line can be explained as operator<<(cout,c1)
+    
+   
