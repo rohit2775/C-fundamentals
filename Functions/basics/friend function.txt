@@ -185,3 +185,53 @@ int main(){
     cout << "hello worlld" << endl;
     return 0;
 }
+
+
+
+## overloading of insertion and extraction operator unsig friend function 
+
+
+
+#include<iostream>
+using namespace std;
+
+class coomm{
+     private:
+     int a ,b;
+     public:
+     void setdata (int x, int y ){
+        a=x;
+        b=y;
+     }
+     void showdata()
+        {
+        cout<<"a="<<a<<"b="<<b ;
+        }
+     friend ostream& operator<<(ostream& ,coomm);
+     friend istream& operator>>(istream& , coomm);
+
+
+
+};
+ ostream& operator<<(ostream &dout,coomm C)
+ {
+    dout<<"a="<<C.a<<"b="<<C.b;
+     return(dout);
+ }
+ istream& operator>>(istream &din, coomm D){
+    din>>D.a>>D.b;
+ }
+
+
+
+
+
+int main (){
+    coomm c1,c2;
+    cout<<"enter a complex number ";
+    cin>>c1;
+    cout<<"you entered";
+    cout<<c1;
+
+
+    return 0;
