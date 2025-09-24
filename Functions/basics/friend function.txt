@@ -106,7 +106,7 @@ then why friend function ???
 
 
   
-    part 3 - overloading of operator in friend function ....
+    ###part 3 - overloading of operator in friend function ....
 
      lets get a program for better understanding 
 
@@ -149,5 +149,39 @@ int main(){
 
 
   here we can clearly see that how the  overloading of operator+ by friend function ;
-  
 
+
+    ### part 4 overlafing of unary opearator in friend function ;
+
+
+
+class number  {
+    int a, b;  // ✅ declare private members
+
+public:
+    void setdata(int x, int y){
+        a = x;
+        b = y;
+    }
+
+    void showdata(){
+        cout << "a=" << a << " b=" << b << endl;
+    }
+
+   friend number  operator+(compno);
+};
+ number operator+(number X){
+        number temp;
+        temp.a = -X.a;
+        temp.b = -X.b;
+        return temp;
+    }
+
+int main(){
+     number c1, c2, c3;
+    c1.setdata(6);
+    c2= -c1 // c2= operator-(c1);
+    c3.showdata();
+    cout << "hello worlld" << endl;
+    return 0;
+}
