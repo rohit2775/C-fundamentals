@@ -245,4 +245,7 @@ similarly ;
 
     cout<<c1; /// this line can be explained as operator<<(cout,c1)
     
+   *we have to write the return type of the caller object which class it belongs to 
+   * cout /cin are the objects of ostream/istream class 
+   * we cannot change  or modify the code of ostream/istream class so we have to use the refrence of the classes 
    
