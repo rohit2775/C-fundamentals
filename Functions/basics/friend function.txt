@@ -249,3 +249,66 @@ similarly ;
    * cout /cin are the objects of ostream/istream class 
    * we cannot change  or modify the code of ostream/istream class so we have to use the refrence of the classes 
    
+
+##5 “A member function of one class can be a friend of another class”
+This means that only a specific member function of one class can access the private/protected members of another class, not the entire class
+This is useful when you want restricted access — i.e., only one particular function needs special permission, not the whole class.
+
+
+here is a example code 
+
+
+#include <iostream>
+using namespace std;
+
+class B; // Forward declaration
+
+class A {
+private:
+    int x;
+
+public:
+    A() { x = 10; }
+
+    // Member function of A declared
+    void showBdata(B &b);
+};
+
+class B {
+private:
+    int y;
+
+public:
+    B() { y = 20; }
+
+    // Allow only A::showBdata() to access private members of B
+    friend void A::showBdata(B &b);
+};
+
+// Definition of member function
+void A::showBdata(B &b) {
+    cout << "A's x = " << x << endl;
+    cout << "B's y = " << b.y << endl; // Accessing private of B
+}
+
+int main() {
+    A objA;
+    B objB;
+
+    objA.showBdata(objB);
+
+    return 0;
+}
+ 
+
+Explanation:
+
+Normally, class B’s private member y cannot be accessed by any function of class A.
+But here we made only A::showBdata() a friend of B.
+Now, showBdata() has special permission to directly access B’s private members.
+Other functions of class A still do not have access.
+
+
+There is a BankAccount class where the balance is private.
+There is a Loan class, and you want only one specific function, Loan::checkEligibility(BankAccount &acc), to check the balance.
+In this case, you don’t need to make the entire Loan class a friend, you can just make one function a friend.
