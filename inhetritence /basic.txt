@@ -1,0 +1,22 @@
+ ## understanding the need if inheritance 
+    
+     inheritance is the process of inheriting properties and behavior of existing class into a new class 
+     
+     means we can add the properties of an existing class into a new class with new members 
+     ,, if dont undwrstand go through car and sport car class example in yt 
+     https://youtu.be/K62XuFHUcOA?si=WBb9elzZ7RlFRj9R
+
+
+     the basic syntax is 
+
+     class old
+     {
+
+     };
+     class new : public/private old
+      {
+
+     };
+
+     
+      
