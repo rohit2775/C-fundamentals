@@ -20,3 +20,42 @@
 
      
       
+#include <iostream>
+using namespace std;
+
+// Base class (Parent)
+class Animal {
+public:
+    void eat() {
+        cout << "I can eat" << endl;
+    }
+
+    void sleep() {
+        cout << "I can sleep" << endl;
+    }
+};
+
+// Derived class (Child) inherits from Animal
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "I can bark" << endl;
+    }
+};
+
+int main() {
+    // Create object of Dog
+    Dog d1;
+
+    // Dog class can access Animal class functions
+    d1.eat();     // Inherited from Animal
+    d1.sleep();   // Inherited from Animal
+    d1.bark();    // Own function of Dog
+
+    return 0;
+}
+
+
+
+
+here is the basic example  code of inheritance 
