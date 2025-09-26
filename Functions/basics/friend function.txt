@@ -319,4 +319,5 @@ In this case, you don’t need to make the entire Loan class a friend, you can j
 
 Friend Class → If you make an entire class a friend, then all of its member functions can access the private/protected members of the other class.
 Friend Member Function → If you make only a single function a friend, then only that specific function can access the private/protected members of the other class, not the rest.
-👉 So, a friend function is used for controlled access, while a friend class is used for full access.
+👉 So, a friend function is used for controlled access, while a friend class is used for full access. 
+
