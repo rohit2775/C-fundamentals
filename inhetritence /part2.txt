@@ -6,5 +6,54 @@
   4. hierarchical inheritance
   5.hybrid inheritance 
 
-  
-   
+
+   What is Single Inheritance?
+
+Single inheritance means when one child class (derived class) inherits from only one parent class (base class).
+It allows the child class to reuse the properties and methods of the parent class without rewriting them.
+
+👉 Example idea:
+
+Vehicle is the parent class (it has general properties like wheels, engine).
+Car is the child class that inherits from Vehicle and adds its own features (like air conditioning).
+
+🔹 Code Example (C++)
+#include <iostream>
+using namespace std;
+
+// Base class (Parent)
+class Vehicle {
+public:
+    void start() {
+        cout << "Vehicle is starting..." << endl;
+    }
+};
+
+// Derived class (Child)
+class Car : public Vehicle {
+public:
+    void feature() {
+        cout << "Car has Air Conditioning." << endl;
+    }
+};
+
+int main() {
+    Car myCar;
+
+    // Inherited function from Vehicle
+    myCar.start();
+
+    // Function from Car class
+    myCar.feature();
+
+    return 0;
+}
+
+🔹 Output:
+Vehicle is starting...
+Car has Air Conditioning.
+
+🔹 Real-world analogy:
+
+It’s like a son inheriting his father’s property and also adding his own things.
+That’s single inheritance → inheriting from only one parent.
