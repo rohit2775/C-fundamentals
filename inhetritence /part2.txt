@@ -57,3 +57,66 @@ Car has Air Conditioning.
 
 It’s like a son inheriting his father’s property and also adding his own things.
 That’s single inheritance → inheriting from only one parent.
+
+
+
+
+one more example for better understanding 
+
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Student {
+public:
+    string name;
+    int roll;
+
+    void getInfo(string n, int r) {
+        name = n;
+        roll = r;
+    }
+
+    void displayInfo() {
+        cout << "Name: " << name << endl;
+        cout << "Roll: " << roll << endl;
+    }
+};
+
+// Derived class
+class Marks : public Student {
+public:
+    int score;
+
+    void setScore(int s) {
+        score = s;
+    }
+
+    void displayScore() {
+        cout << "Score: " << score << endl;
+    }
+};
+
+int main() {
+    Marks m1;
+
+    // Using base class function
+    m1.getInfo("Rohit", 101);
+    m1.displayInfo();
+
+    // Using derived class function
+    m1.setScore(95);
+    m1.displayScore();
+
+    return 0;
+}
+
+
+here 
+
+Student = parent class (common info like name, roll).
+
+Marks = child class (extra info like score).
+
+Marks inherits everything from Student, so it can use both parent functions and its own functions.
