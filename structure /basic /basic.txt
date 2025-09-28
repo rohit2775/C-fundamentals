@@ -16,6 +16,7 @@
  now StructureName is a datatype , and can also create variables using StructureName datatype 
 
  ex StructureName s1;
+ 
 
 
 
