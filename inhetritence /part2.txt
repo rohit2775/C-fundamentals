@@ -116,7 +116,34 @@ int main() {
 here 
 
 Student = parent class (common info like name, roll).
-
 Marks = child class (extra info like score).
-
 Marks inherits everything from Student, so it can use both parent functions and its own functions.
+
+
+lets get some more examples for better understansings 
+
+example 1 ::
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    void showStudent() {
+        cout << "This is a student" << endl;
+    }
+};
+
+class Result : public Student {
+public:
+    void showResult() {
+        cout << "Student got 90 marks" << endl;
+    }
+};
+
+int main() {
+    Result r;
+    r.showStudent();
+    r.showResult();
+    return 0;
+}
