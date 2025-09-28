@@ -177,5 +177,32 @@ int main() {
 }
 
 
+example 3 ::
+
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    void start() {
+        cout << "Vehicle is starting..." << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void showCar() {
+        cout << "This is a car" << endl;
+    }
+};
+
+int main() {
+    Car c;
+    c.start();    // parent class function
+    c.showCar();  // child class function
+    return 0;
+}
+
 
 
