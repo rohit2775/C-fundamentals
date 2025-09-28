@@ -202,7 +202,73 @@ int main() {
     c.start();    // parent class function
     c.showCar();  // child class function
     return 0;
+}\
+
+last example ::::;
+
+#include <iostream>
+using namespace std;
+
+// Parent Class (Base)
+class BankAccount {
+public:
+    string accountHolder;
+    int accountNumber;
+    double balance;
+
+    // Function to set details
+    void setDetails(string name, int accNo, double bal) {
+        accountHolder = name;
+        accountNumber = accNo;
+        balance = bal;
+    }
+
+    // Show details
+    void showDetails() {
+        cout << "Account Holder: " << accountHolder << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+};
+
+// Child Class (Derived)
+class SavingsAccount : public BankAccount {
+public:
+    double interestRate;
+
+    void setInterestRate(double rate) {
+        interestRate = rate;
+    }
+
+    void calculateInterest() {
+        double interest = (balance * interestRate) / 100;
+        cout << "Interest Earned: $" << interest << endl;
+    }
+};
+
+int main() {
+    SavingsAccount s1;
+
+    // Parent class function
+    s1.setDetails("Rohit", 10101, 5000);
+
+    // Child class function
+    s1.setInterestRate(5.0);
+
+    // Show results
+    s1.showDetails();
+    s1.calculateInterest();
+
+    return 0;
 }
+
+
+the output will be ..
+Account Holder: Rohit
+Account Number: 10101
+Balance: $5000
+Interest Earned: $250
+
 
 
 
