@@ -551,3 +551,51 @@ int main() {
     r.displayResult();
     return 0;
 }
+
+
+visibility modes in C++
+  -private
+  -protected 
+  -public 
+
+
+
+When a class inherits another class, the visibility mode decides how the base class members are accessible in the derived class.
+
+1. Public inheritance
+
+class Derived : public Base { ... };
+
+Public members of Base → stay Public in Derived.
+Protected members of Base → stay Protected in Derived.
+Private members of Base → ❌ not accessible.
+👉 Use when: You want a real is-a relationship.
+Example: Dog is an Animal, SportsCar is a Car.
+
+2. Protected Inheritance
+
+class Derived : protected Base { ... };
+
+Public members of Base → become Protected in Derived.
+Protected members of Base → stay Protected in Derived.
+Private members of Base → ❌ not accessible.
+👉 Use when: You want inheritance, but you don’t want to expose base class members to the outside world.
+Example: Internal implementations where only derived classes should use them.
+
+3. Private inheritance 
+
+class Derived : private Base { ... };
+Public members of Base → become Private in Derived.
+Protected members of Base → become Private in Derived.
+Private members of Base → ❌ not accessible.
+👉 Use when: You only want to use the base class internally, but don’t want the derived class to be seen as a type of the base class.
+Example: Car uses Engine internally → not “Car is an Engine”.
+
+
+✅ So in short:
+
+Public inheritance → Use for “is-a” relationships.
+
+Protected inheritance → Use when only derived classes should access base members.
+
+Private inheritance → Use when base is just an internal helper, not a parent type.
