@@ -376,3 +376,93 @@ int main() {
     myCar.display();
     return 0;
 }
+
+
+
+### hierarchical inheritance 
+
+when  different classes are formed by inheriting the same parent class , called hierearchical inheritance 
+
+like ::
+    
+    class A{
+
+    };
+    class B :public A{
+
+    };
+    class C:public A{
+
+    };
+    
+
+    here the parent class of B and C is A
+
+
+    lets get some example code 
+    example1 ::
+
+
+     
+    #include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void eat() { cout << "Animals can eat" << endl; }
+};
+
+class Dog : public Animal {
+public:
+    void bark() { cout << "Dog barks" << endl; }
+};
+
+class Cat : public Animal {
+public:
+    void meow() { cout << "Cat meows" << endl; }
+};
+
+int main() {
+    Dog d;
+    d.eat();
+    d.bark();
+
+    Cat c;
+    c.eat();
+    c.meow();
+
+    return 0;
+}
+ 
+
+ example 2 :
+
+   #include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    void area() { cout << "Every shape has an area" << endl; }
+};
+
+class Circle : public Shape {
+public:
+    void drawCircle() { cout << "Drawing Circle" << endl; }
+};
+
+class Square : public Shape {
+public:
+    void drawSquare() { cout << "Drawing Square" << endl; }
+};
+
+int main() {
+    Circle c;
+    c.area();
+    c.drawCircle();
+
+    Square s;
+    s.area();
+    s.drawSquare();
+    return 0;
+}
+
