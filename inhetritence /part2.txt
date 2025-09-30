@@ -286,7 +286,7 @@ Interest Earned: $250
    }:
    
    class C:public B{
-    
+
    };
 
 
@@ -296,6 +296,83 @@ Interest Earned: $250
 
 
 
+######### multiple inheritance .....
+
+       if a class have more than one parent class then it is said to be multiple inheritance ..
+
+       like ...
+
+       class a{
+
+       };
+
+       class b{
+
+       };
+
+       class c:public a,public b {
+  
+       };
+
+       here class c inherits class a and b means  class  c have two parents i.e. class a and class b 
 
 
 
+
+some example codes are .....
+
+        #include <iostream>
+using namespace std;
+
+class A {
+public:
+    void showA() { cout << "This is class A" << endl; }
+};
+
+class B {
+public:
+    void showB() { cout << "This is class B" << endl; }
+};
+
+// Class C inherits from A and B
+class C : public A, public B {
+public:
+    void showC() { cout << "This is class C" << endl; }
+};
+
+int main() {
+    C obj;
+    obj.showA();
+    obj.showB();
+    obj.showC();
+    return 0;
+}
+
+example 2 
+
+#include <iostream>
+using namespace std;
+
+class Engine {
+public:
+    void engineType() { cout << "Petrol Engine" << endl; }
+};
+
+class Wheels {
+public:
+    void wheelType() { cout << "Alloy Wheels" << endl; }
+};
+
+// Car has both Engine and Wheels
+class Car : public Engine, public Wheels {
+public:
+    void display() { cout << "This is a Car" << endl; }
+};
+
+int main() {
+    Car myCar;
+    myCar.engineType();
+    myCar.wheelType();
+    myCar.display();
+    return 0;
+}
