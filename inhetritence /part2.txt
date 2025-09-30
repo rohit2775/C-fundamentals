@@ -7,7 +7,7 @@
   5.hybrid inheritance 
 
 
-   What is Single Inheritance?
+############ Single Inheritance
 
 Single inheritance means when one child class (derived class) inherits from only one parent class (base class).
 It allows the child class to reuse the properties and methods of the parent class without rewriting them.
@@ -270,5 +270,32 @@ Balance: $5000
 Interest Earned: $250
 
   
+
+######## multiple levwl inheritance 
+
+ in this type there are multiple levels of single inheritance .. ..
+
+   let us see a axample for better uderstanding 
+
+   class A{
+
+   };
+
+   class B :public A{
+
+   }:
+   
+   class C:public B{
+    
+   };
+
+
+   ... here we have to aware about the parent class and the child class of particular classes 
+    like parent class of C is B 
+    and parent class of B is A;
+
+
+
+
 
 
