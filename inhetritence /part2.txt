@@ -466,3 +466,88 @@ int main() {
     return 0;
 }
 
+
+
+
+
+
+
+
+
+###### hybrid inheritance ...
+
+hybrid inheritance means combination of two or more types of inheritance in a single program .. 
+we mix different nheritance types like single , multiple ,  multilevel , hierearchical together in a program is called 
+hybrid inheritane ...
+
+
+example code 
+
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    void showA() { cout << "This is A" << endl; }
+};
+
+class B : public A {
+public:
+    void showB() { cout << "This is B" << endl; }
+};
+
+class C {
+public:
+    void showC() { cout << "This is C" << endl; }
+};
+
+// D inherits from both B (which already has A) and C
+class D : public B, public C {
+public:
+    void showD() { cout << "This is D" << endl; }
+};
+
+int main() {
+    D obj;
+    obj.showA();
+    obj.showB();
+    obj.showC();
+    obj.showD();
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Student {
+public:
+    void details() { cout << "Student Details" << endl; }
+};
+
+// Derived class from Student
+class Marks : public Student {
+public:
+    void getMarks() { cout << "Student Marks" << endl; }
+};
+
+// Another base class
+class Sports {
+public:
+    void getSportsScore() { cout << "Student Sports Score" << endl; }
+};
+
+// Result inherits from both Marks (which already inherits Student) and Sports
+class Result : public Marks, public Sports {
+public:
+    void displayResult() { cout << "Final Result of Student" << endl; }
+};
+
+int main() {
+    Result r;
+    r.details();
+    r.getMarks();
+    r.getSportsScore();
+    r.displayResult();
+    return 0;
+}
