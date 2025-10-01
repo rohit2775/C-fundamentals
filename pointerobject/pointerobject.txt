@@ -9,4 +9,42 @@ llows dynamic memory management inside classes.
 
 
  example code 
- 
+   #include <iostream>
+using namespace std;
+
+class PointerObject {
+private:
+    int* ptr; // pointer data member
+
+public:
+    // Constructor
+    PointerObject(int value) {
+        ptr = new int(value);  // allocate memory dynamically
+    }
+
+    // Getter
+    int getValue() {
+        return *ptr; // return value using dereference
+    }
+
+    // Setter
+    void setValue(int value) {
+        *ptr = value;
+    }
+
+    // Destructor (to free memory)
+    ~PointerObject() {
+        delete ptr;
+        cout << "Memory freed!" << endl;
+    }
+};
+
+int main() {
+    PointerObject obj1(10);   // object created, internally pointer stores 10
+    cout << "Initial Value: " << obj1.getValue() << endl;
+
+    obj1.setValue(25);  // update value through pointer
+    cout << "Updated Value: " << obj1.getValue() << endl;
+
+    return 0;
+}
