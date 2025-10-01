@@ -1,0 +1,12 @@
+####  Pointer Object?
+
+In C++, a pointer object means an object (instance of a class) that internally manages data using pointers.
+So basically:
+The object itself is like a wrapper
+Inside it, a pointer stores the actual memory address
+llows dynamic memory management inside classes.
+
+
+
+ example code 
+ 
