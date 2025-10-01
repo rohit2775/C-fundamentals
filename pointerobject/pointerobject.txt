@@ -48,3 +48,41 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+Why Do We Need Pointer Objects in C++?
+
+Pointer objects are needed because they give flexibility and control over memory.
+Instead of storing fixed data directly inside an object, we can use pointers inside the object to manage dynamic data.
+
+🔹 Main Uses of Pointer Objects
+1. Dynamic Memory Management
+
+If you don’t know the size of data at compile-time, you can allocate memory at runtime using a pointer inside the object.
+using a pointer inside the object.
+
+Example: Storing a student’s name where the length can vary.
+
+class Student {
+    char* name;
+public:
+    Student(const char* n) {
+        name = new char[strlen(n) + 1];  
+        strcpy(name, n);  
+    }
+    ~Student() {
+        delete[] name;  
+    }
+};
+
+
+Here the name is managed dynamically through a pointer object.
