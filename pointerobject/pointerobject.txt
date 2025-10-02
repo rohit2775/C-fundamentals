@@ -86,3 +86,51 @@ public:
 
 
 Here the name is managed dynamically through a pointer object.
+
+
+
+
+ ### this pointer in c++":
+
+ In C++, this is an implicit pointer available inside all non-static member functions of a class.
+It points to the object that is calling the member function.
+
+Why we need this pointer?
+
+To refer to the calling object itself
+
+To resolve naming conflicts (like when member variables have the same name as function parameters)
+
+To allow function chaining (returning *this)
+
+Example 1: Accessing calling object
+#include <iostream>
+using namespace std;
+
+class Box {
+    int length;
+public:
+    void setLength(int length) {
+        this->length = length;  // 'this' resolves conflict
+    }
+    void showLength() {
+        cout << "Length = " << this->length << endl;
+    }
+};
+
+int main() {
+    Box b;
+    b.setLength(10);
+    b.showLength();
+    return 0;
+}
+
+
+Explanation:
+
+Inside setLength(), the parameter name is also length.
+
+this->length refers to the object’s member variable.
+
+length without this refers to the parameter.
+
