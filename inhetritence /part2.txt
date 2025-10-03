@@ -599,3 +599,9 @@ Public inheritance → Use for “is-a” relationships.
 Protected inheritance → Use when only derived classes should access base members.
 
 Private inheritance → Use when base is just an internal helper, not a parent type.
+
+
+
+
+
+note : use inheritance with the usecase ... 
