@@ -709,3 +709,9 @@ class Button(Widget):
 class Textbox(Widget):
     def type_text(self, text):
         print(f"Typing {text}")
+
+
+
+
+
+        ... and here is the end of inheritance 
